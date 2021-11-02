@@ -17,7 +17,7 @@ function setup() {
 
   createCanvas(1500,700);
 
-  balloon=createSprite(250,650,150,150);
+  balloon=createSprite(250,300,150,150);
   balloon.addAnimation("hotAirBalloon",balloonImage1);
   balloon.scale=0.5;
 
@@ -44,12 +44,12 @@ function draw() {
   else if(keyDown(UP_ARROW)){
     updateHeight(0,-10);
     balloon.addAnimation("hotAirBalloon",balloonImage2);
-    balloon.scale=balloon.scale -0.005;
+    balloon.x=balloon.x+5;
   }
   else if(keyDown(DOWN_ARROW)){
     updateHeight(0,+10);
     balloon.addAnimation("hotAirBalloon",balloonImage2);
-    balloon.scale=balloon.scale+0.005;
+    balloon.x=balloon.x-5;
   }
 
   drawSprites();
